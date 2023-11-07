@@ -31,7 +31,7 @@ export const cleanParksData = (parks) => {
 
 export const getParks = () => {
   return fetch(
-    `https://developer.nps.gov/api/v1/parks?limit=550&q=acadia&api_key=${apiKey}`
+    `https://developer.nps.gov/api/v1/parks?limit=550&q=national%20park&api_key=${apiKey}`
   ).then((response) => {
     if (!response.ok) {
       throw new Error(response.status);
