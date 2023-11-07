@@ -1,4 +1,8 @@
 .card {
-
   border: solid greenyellow 1px;
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
 }
