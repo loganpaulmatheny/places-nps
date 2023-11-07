@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "../Home/Home";
+import ParkInfo from "../Park_Info/ParkInfo";
+import Visit from "../Visit/Visit";
+import Error from "../Error/Error";
+import { useEffect, useState } from "react";
+import mockData from "../../Mock_Data/MockData";
+import { cleanParkData } from "../../apiCalls";
 
 function App() {
+  const [parks, setParks] = useState([]);
+
+  useEffect(() => {
+    const parkData = cleanParkData(mockData);
+    setParks(parkData);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        {/* {error ? (
+          <Route path="/" element={<Error />}></Route>
+        ) : (
+          <Route path="/" element={<Home />}></Route>
+        )} */}
+        <Route path="/" element={<Home parks={parks} />}></Route>
+        <Route path="/park/:id" element={<ParkInfo />}></Route>
+        <Route path="/visit" element={<Visit />}></Route>
+        <Route path="*" element={<Error />}></Route>
+      </Routes>
+    </>
   );
 }
 
