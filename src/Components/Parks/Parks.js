@@ -9,6 +9,7 @@ function Parks({ parks, toggleVisit }) {
     return (
       <Card
         id={park.id}
+        image_path={park.images[0].url}
         fullname={park.fullName}
         visited={park.visited}
         key={park.id}

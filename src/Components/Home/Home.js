@@ -4,7 +4,7 @@ import Parks from "../Parks/Parks";
 
 function Home({ parks, toggleVisit }) {
   return (
-    <div>
+    <div className="home-container">
       <Parks parks={parks} toggleVisit={toggleVisit} />
     </div>
   );

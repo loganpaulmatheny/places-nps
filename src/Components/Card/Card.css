@@ -1,10 +1,16 @@
+
+
 .card {
-  border: solid greenyellow 1px;
+
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: black solid 1px;
+  background-color: white;
 }
 
 .nav-link {
@@ -16,13 +22,13 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
   cursor: pointer;
 }
 
 .arrow-icon {
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
   cursor: pointer;
 }

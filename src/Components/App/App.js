@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
+import Navigation from "../Navigation/Navigation";
 import Home from "../Home/Home";
 import ParkInfo from "../Park_Info/ParkInfo";
 import Visit from "../Visit/Visit";
@@ -30,12 +31,9 @@ function App() {
 
   useEffect(() => {
     getParksData();
-    // const parkData = cleanParkData(mockData);
-    // setParks(parkData);
   }, []);
 
   const toggleVisit = (id) => {
-    // console.log("getting here", id);
     const updatedParks = parks.map((park) => {
       if (park.id === id) {
         return { ...park, visited: !park.visited };
@@ -47,19 +45,22 @@ function App() {
 
   return (
     <>
-      <NavLink to={`/`}>Home</NavLink>
-      <NavLink to={`/visit`}>Visited</NavLink>
+    <Navigation />
       <Routes>
         {/* {error ? (
           <Route path="/" element={<Error />}></Route>
-        ) : (
-          <Route path="/" element={<Home />}></Route>
-        )} */}
+          ) : (
+            <Route path="/" element={<Home />}></Route>
+          )} */}
+
         <Route
           path="/"
           element={<Home parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
-        <Route path="/park/:id" element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}></Route>
+        <Route
+          path="/park/:id"
+          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
         <Route
           path="/visit"
           element={<Visit parks={parks} toggleVisit={toggleVisit} />}
