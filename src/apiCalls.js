@@ -29,6 +29,7 @@ export const cleanParksData = (parks) => {
     return {
       id: park.id,
       fullName: park.fullName ?? "No Name",
+      visited: false,
       url: park.url || "No website",
       description: park.description || "No description available",
       directionsUrl: park.directionsUrl || "No directions available",
