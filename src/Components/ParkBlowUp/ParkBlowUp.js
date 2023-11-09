@@ -14,7 +14,7 @@ function ParkBlowUp({ park, toggleVisit }) {
   });
 
   return (
-    <article>
+    <article className="park-info">
       <div className="title">
         <h1>{park.fullName}</h1>
         {!park.visited ? (
