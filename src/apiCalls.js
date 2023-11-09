@@ -43,7 +43,7 @@ export const cleanParksData = (parks) => {
       weatherInfo: park.weatherInfo || "Weather information not available",
     };
   });
-
+  console.log(cleanParks);
   // console.log(cleanParks);
   return cleanParks;
 };

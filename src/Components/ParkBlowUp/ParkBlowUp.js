@@ -1,5 +1,6 @@
 import "./ParkBlowUp.css";
 import React from "react";
+import PropTypes from "prop-types";
 
 function ParkBlowUp({ park, toggleVisit }) {
   const images = park.images.map((image) => {
@@ -47,5 +48,20 @@ function ParkBlowUp({ park, toggleVisit }) {
     </article>
   );
 }
+
+ParkBlowUp.propTypes = {
+  park: PropTypes.shape({
+    id: PropTypes.string,
+    fullName: PropTypes.string,
+    url: PropTypes.string,
+    description: PropTypes.string,
+    directionsUrl: PropTypes.string,
+    address: PropTypes.object,
+    images: PropTypes.array,
+    weatherInfo: PropTypes.string,
+  }).isRequired,
+
+  toggleVisit: PropTypes.func.isRequired,
+};
 
 export default ParkBlowUp;

@@ -13,23 +13,30 @@ import { getParks } from "../../apiCalls";
 import { NavLink } from "react-router-dom";
 function App() {
   const [parks, setParks] = useState([]);
+  const [error, setError] = useState("");
 
   function getParksData() {
-    getParks().then((data) => {
-      const parkData = cleanParksData(data);
-      setParks(parkData);
-    });
-    // .catch((error) => {
-    //   console.log(error.message);
-    //   if (error.message === "404") {
-    //     setError("Try checking your URL");
-    //   } else {
-    //     setError("There may be an error on our end, please try again later");
-    //   }
-    // });
+    getParks()
+      .then((data) => {
+        const parkData = cleanParksData(data);
+        setParks(parkData);
+      })
+      .catch((error) => {
+        console.log(error.message);
+        if (error.message === "500") {
+          setError(
+            "Looks like the compass might be broke, please try again later!"
+          );
+        } else {
+          setError(
+            "The trail is closed for the season, check back in the warmer months!"
+          );
+        }
+      });
   }
 
   useEffect(() => {
+    clearError();
     getParksData();
   }, []);
 
@@ -43,27 +50,29 @@ function App() {
     setParks(updatedParks);
   };
 
+  const clearError = () => {
+    setError("");
+  };
+
   return (
     <>
-    <Navigation />
+      <Navigation />
       <Routes>
-        {/* {error ? (
-          <Route path="/" element={<Error />}></Route>
-          ) : (
-            <Route path="/" element={<Home />}></Route>
-          )} */}
-
+        {error ? (
+          <Route path="/" element={<Error error={error} />}></Route>
+        ) : (
+          <Route
+            path="/"
+            element={<Home parks={parks} toggleVisit={toggleVisit} />}
+          ></Route>
+        )}
         <Route
-          path="/"
-          element={<Home parks={parks} toggleVisit={toggleVisit} />}
+          path="/visit"
+          element={<Visit parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
         <Route
           path="/park/:id"
           element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
-        ></Route>
-        <Route
-          path="/visit"
-          element={<Visit parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
