@@ -1,4 +1,34 @@
+
+
 .card {
 
-  border: solid greenyellow 1px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  border: black solid 1px;
+  background-color: white;
+}
+
+.nav-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
+}
+
+.visit-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
 }

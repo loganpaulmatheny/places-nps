@@ -1,6 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
+import Navigation from "../Navigation/Navigation";
 import Home from "../Home/Home";
 import ParkInfo from "../Park_Info/ParkInfo";
 import Visit from "../Visit/Visit";
@@ -9,7 +10,7 @@ import { useEffect, useState } from "react";
 // import mockData from "../../Mock_Data/MockData";
 import { cleanParksData } from "../../apiCalls";
 import { getParks } from "../../apiCalls";
-
+import { NavLink } from "react-router-dom";
 function App() {
   const [parks, setParks] = useState([]);
 
@@ -30,21 +31,40 @@ function App() {
 
   useEffect(() => {
     getParksData();
-    // const parkData = cleanParkData(mockData);
-    // setParks(parkData);
   }, []);
+
+  const toggleVisit = (id) => {
+    const updatedParks = parks.map((park) => {
+      if (park.id === id) {
+        return { ...park, visited: !park.visited };
+      }
+      return park;
+    });
+    setParks(updatedParks);
+  };
 
   return (
     <>
+    <Navigation />
       <Routes>
         {/* {error ? (
           <Route path="/" element={<Error />}></Route>
-        ) : (
-          <Route path="/" element={<Home />}></Route>
-        )} */}
-        <Route path="/" element={<Home parks={parks} />}></Route>
-        <Route path="/park/:id" element={<ParkInfo />}></Route>
-        <Route path="/visit" element={<Visit />}></Route>
+          ) : (
+            <Route path="/" element={<Home />}></Route>
+          )} */}
+
+        <Route
+          path="/"
+          element={<Home parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
+        <Route
+          path="/park/:id"
+          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
+        <Route
+          path="/visit"
+          element={<Visit parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
     </>

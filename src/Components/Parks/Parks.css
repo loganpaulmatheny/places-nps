@@ -1,6 +1,17 @@
 .parks-container {
+  margin: 7rem;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: scroll;
   grid-gap: 20px;
+  height: 70vh;
+  border: black solid 1px;
+  border-radius: 10px;
+  width: 80%;
+  background-color: white;
 }
+
