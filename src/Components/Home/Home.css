@@ -1,11 +1,9 @@
 /* Default styles for all screen sizes */
 .home-container {
   padding: 20px;
-  /* background-image: url("../../../public/hiking.png"); */
-  background-size: "cover";
-  background-repeat: "no-repeat";
   height: 100%;
-
+  display: flex;
+  justify-content: center;
 }
 
 

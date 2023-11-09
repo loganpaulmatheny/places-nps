@@ -20,7 +20,7 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center top",
-          height: "220px", // Limit the height to 150px
+          height: "350px", // Limit the height to 150px
           width: "100%", // Set a maximum width while maintaining aspect ratio
           borderTopLeftRadius: "10px", // Adjust the radius value as needed
           borderTopRightRadius: "10px", // A

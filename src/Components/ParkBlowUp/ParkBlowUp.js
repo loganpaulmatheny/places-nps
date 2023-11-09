@@ -15,31 +15,35 @@ function ParkBlowUp({ park, toggleVisit }) {
 
   return (
     <article>
-      <h1>{park.fullName}</h1>
-      {!park.visited ? (
-        <img
-          className="visit-icon-blowup"
-          src={process.env.PUBLIC_URL + "/toVisit.png"}
-          alt="an empty trail signpost"
-          onClick={() => toggleVisit(park.id)}
-        />
-      ) : (
-        <img
-          className="visit-icon-blowup"
-          src={process.env.PUBLIC_URL + "/visited.png"}
-          alt="a colored trail signpost"
-          onClick={() => toggleVisit(park.id)}
-        />
-      )}
+      <div className="title">
+        <h1>{park.fullName}</h1>
+        {!park.visited ? (
+          <img
+            className="visit-icon-blowup"
+            src={process.env.PUBLIC_URL + "/toVisit.png"}
+            alt="an empty trail signpost"
+            onClick={() => toggleVisit(park.id)}
+          />
+        ) : (
+          <img
+            className="visit-icon-blowup"
+            src={process.env.PUBLIC_URL + "/visited.png"}
+            alt="a colored trail signpost"
+            onClick={() => toggleVisit(park.id)}
+          />
+        )}
+      </div>
       <div className="park-image-container">{images}</div>
-      <h2>Description:</h2>
-      <p>{park.description}</p>
-      <p>
-        <strong>Address: </strong>
-        {park.address.street} {park.address.city}, {park.address.stateCode}{" "}
-        {park.address.zip}
-      </p>
-      <a href={park.directionsUrl}>Directions</a>
+      <div className="details-container">
+        <h2>Description:</h2>
+        <p>{park.description}</p>
+        <p>
+          <strong>Address: </strong>
+          {park.address.street} {park.address.city}, {park.address.stateCode}{" "}
+          {park.address.zip}
+        </p>
+        <a href={park.directionsUrl}>Directions</a>
+      </div>
     </article>
   );
 }

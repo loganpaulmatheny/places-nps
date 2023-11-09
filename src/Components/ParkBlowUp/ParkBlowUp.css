@@ -1,9 +1,47 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  font-size: 4rem;
+}
+h1 {
+  margin: 0px;
+}
+
+.park-image-container {
+  /* margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow: scroll;
+  grid-gap: 20px;
+
+  border: black solid 1px;
+  border-radius: 10px; */
+  grid-gap: 20px;
+  border-radius: 10px; 
+  border: black solid 1px;
+  display: flex;
+  overflow: scroll;
+  scrollbar-gutter: stable both-edges;
+  width: 85%;
+  margin-left: 5%;
+  
+}
+
 .blow-up-image {
-  width: 300px;
-  height: auto;
+  animation: scroll 30s linear infinite ;
+  padding: 30px;
+  width: 700px;
+  height: 500px;
 }
 
 .visit-icon-blowup {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
+
+
