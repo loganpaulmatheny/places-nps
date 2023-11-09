@@ -45,7 +45,7 @@ function App() {
 
   return (
     <>
-    <Navigation />
+      <Navigation />
       <Routes>
         {/* {error ? (
           <Route path="/" element={<Error />}></Route>
@@ -58,12 +58,12 @@ function App() {
           element={<Home parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
         <Route
-          path="/park/:id"
-          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
-        ></Route>
-        <Route
           path="/visit"
           element={<Visit parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
+        <Route
+          path="/park/:id"
+          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
