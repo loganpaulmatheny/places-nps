@@ -1,6 +1,7 @@
 import "./Visit.css";
 import React from "react";
 import Parks from "../Parks/Parks";
+import PropTypes from "prop-types";
 // import { useParams } from "react-router-dom";
 
 function Visit({ parks, toggleVisit }) {
@@ -14,7 +15,11 @@ function Visit({ parks, toggleVisit }) {
             Looks like you haven't visited any parks, it's time to hit the
             trail!
           </h2>
-          <img className="need-adventure" src={process.env.PUBLIC_URL + "/indiana.png"} alt="" />
+          <img
+            className="need-adventure"
+            src={process.env.PUBLIC_URL + "/indiana.png"}
+            alt=""
+          />
         </div>
       ) : (
         <Parks parks={visitedParks} toggleVisit={toggleVisit} />
@@ -22,5 +27,22 @@ function Visit({ parks, toggleVisit }) {
     </div>
   );
 }
+
+Visit.propTypes = {
+  parks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      fullName: PropTypes.string,
+      url: PropTypes.string,
+      description: PropTypes.string,
+      directionsUrl: PropTypes.string,
+      address: PropTypes.object,
+      images: PropTypes.array,
+      weatherInfo: PropTypes.string,
+    })
+  ).isRequired,
+
+  toggleVisit: PropTypes.func.isRequired,
+};
 
 export default Visit;

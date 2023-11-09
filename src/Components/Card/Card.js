@@ -1,12 +1,12 @@
 import "./Card.css";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Card({ id, fullname, image_path, visited, toggleVisit }) {
   function handleToggle() {
     toggleVisit(id); // Pass the ID to the toggleVisit function
   }
-
   return (
     <div className="card">
       <div
@@ -55,5 +55,13 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  id: PropTypes.string.isRequired,
+  fullname: PropTypes.string.isRequired,
+  image_path: PropTypes.string.isRequired,
+  visited: PropTypes.bool.isRequired,
+  toggleVisit: PropTypes.func.isRequired,
+};
 
 export default Card;

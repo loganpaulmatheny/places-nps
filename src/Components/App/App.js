@@ -67,12 +67,12 @@ function App() {
           ></Route>
         )}
         <Route
-          path="/park/:id"
-          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
-        ></Route>
-        <Route
           path="/visit"
           element={<Visit parks={parks} toggleVisit={toggleVisit} />}
+        ></Route>
+        <Route
+          path="/park/:id"
+          element={<ParkInfo parks={parks} toggleVisit={toggleVisit} />}
         ></Route>
         <Route path="*" element={<Error />}></Route>
       </Routes>
