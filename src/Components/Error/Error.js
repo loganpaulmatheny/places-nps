@@ -11,7 +11,7 @@ function Error({ error }) {
             Oops, looks like you might need to check the map
           </h1>
           <img
-            className="need-adventure"
+            className="error-image"
             src={process.env.PUBLIC_URL + "/map.png"}
             alt=""
           />
@@ -28,7 +28,7 @@ function Error({ error }) {
         <div className="error-container">
           <h1 className="error-message">{error}</h1>
           <img
-            className="need-adventure"
+            className="error-image"
             src={process.env.PUBLIC_URL + "/compass.png"}
             alt=""
           />

@@ -25,6 +25,7 @@ export const cleanParksData = (parks) => {
       // return cleanPark;
     }
   });
+
   const cleanParks = foundParks.map((park) => {
     return {
       id: park.id,
@@ -43,8 +44,7 @@ export const cleanParksData = (parks) => {
       weatherInfo: park.weatherInfo || "Weather information not available",
     };
   });
-  console.log(cleanParks);
-  // console.log(cleanParks);
+
   return cleanParks;
 };
 
@@ -53,6 +53,7 @@ export const getParks = () => {
     `https://developer.nps.gov/api/v1/parks?limit=550&q=national%20park&api_key=${apiKey}`
   ).then((response) => {
     if (!response.ok) {
+      console.log("response not okay");
       throw new Error(response.status);
     }
     return response.json();

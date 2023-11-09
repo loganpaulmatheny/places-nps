@@ -19,13 +19,15 @@ function App() {
     getParks()
       .then((data) => {
         const parkData = cleanParksData(data);
+
         setParks(parkData);
       })
       .catch((error) => {
+        console.log(error);
         console.log(error.message);
         if (error.message === "500") {
           setError(
-            "Looks like the compass might be broke, please try again later!"
+            "Looks like the compass might be broken, please try again later!"
           );
         } else {
           setError(
