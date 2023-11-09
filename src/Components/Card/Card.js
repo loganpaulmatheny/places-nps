@@ -6,7 +6,7 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
   function handleToggle() {
     toggleVisit(id); // Pass the ID to the toggleVisit function
   }
-  console.log(image_path);
+
   return (
     <div className="card">
       <div

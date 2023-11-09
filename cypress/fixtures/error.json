@@ -1,0 +1,45 @@
+{
+  "id": "6DA17C86-088E-4B4D-B862-7C1BD5CF236B",
+  "fullName": "Acadia National Park",
+  "visited": false,
+  "url": "https://www.nps.gov/acad/index.htm",
+  "description": "Acadia National Park protects the natural beauty of the highest rocky headlands along the Atlantic coastline of the United States, an abundance of habitats, and a rich cultural heritage. At 4 million visits a year, it's one of the top 10 most-visited national parks in the United States. Visitors enjoy 27 miles of historic motor roads, 158 miles of hiking trails, and 45 miles of carriage roads.",
+  "directionsUrl": "http://www.nps.gov/acad/planyourvisit/directions.htm",
+  "address": {
+      "street": "25 Visitor Center Road",
+      "city": "Bar Harbor",
+      "stateCode": "ME",
+      "zip": "04609"
+  },
+  "images": [
+      {
+          "credit": "NPS / Kristi Rugg",
+          "title": "Acadia's rocky coastline",
+          "altText": "Large puffy clouds dot a brilliant blue sky as wave crash against the rocky coastline of Acadia.",
+          "caption": "Millions of people come to Acadia for our distinctive rocky coastline.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg"
+      },
+      {
+          "credit": "NPS / Kristi Rugg",
+          "title": "Heavy snow-laden trees",
+          "altText": "Hiking tracks carved through three feet of snow wind through a heavy snow-laden forest.",
+          "caption": "During the colder months snows transform our landscape into a winter wonderland.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B4BEC-1DD8-B71B-0B2CF833F93140FF.jpg"
+      },
+      {
+          "credit": "NPS / Kristi Rugg",
+          "title": "Sunset atop Cadillac Mountain",
+          "altText": "A brilliant sunset filled with hues of blue, red, orange, magenta, and purple highlight the sky.",
+          "caption": "As the tallest point on the eastern seaboard Cadillac Mountain provides fantastic viewpoints.",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B477B-1DD8-B71B-0BCB48E009241BAA.jpg"
+      },
+      {
+          "credit": "NPS / Kristi Rugg",
+          "title": "Climbing The Precipice",
+          "altText": "Two hikers ascend a sheer cliff trail by way of historic iron rung ladders.",
+          "caption": "Whether it's a stroll along Ocean Path or a difficult ascent up The Precipice, there are hiking trails for everyone!",
+          "url": "https://www.nps.gov/common/uploads/structured_data/3C7B48F9-1DD8-B71B-0BD3B413E58978F8.jpg"
+      }
+  ],
+  "weatherInfo": "Located on Mount Desert Island in Maine, Acadia experiences all four seasons. Summer temperatures range from 45-90F (7-30C). Fall temperatures range from 30-70F (-1-21C). Typically the first frost is in mid-October and first snowfall begins in November and can continue through April with an average accumulation of 73 inches (185 cm). Winter temperatures range from 14-35F (-10 - 2C). Spring temperatures range from 30-70F (-1-21C)."
+}
