@@ -3,6 +3,7 @@ import React from "react";
 import Parks from "../Parks/Parks";
 import PropTypes from "prop-types";
 // import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Visit({ parks, toggleVisit }) {
   const visitedParks = parks.filter((park) => park.visited === true);
@@ -20,6 +21,14 @@ function Visit({ parks, toggleVisit }) {
             src={process.env.PUBLIC_URL + "/indiana.png"}
             alt=""
           />
+          <Link to="/">
+            <img
+              className="back-button"
+              src={process.env.PUBLIC_URL + "/turn-around.png"}
+              alt=""
+            />
+          </Link>
+          <p>Back to Home</p>
         </div>
       ) : (
         <Parks parks={visitedParks} toggleVisit={toggleVisit} />
