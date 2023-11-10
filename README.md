@@ -3,7 +3,7 @@
 <div align="center">
   
 ##### Built With: 
-<img height="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img width="1468" alt="Screenshot 2023-11-10 at 4 27 47 PM" src="https://user-images.githubusercontent.com/46095125/282182646-49c5d8d3-3b83-4341-a66f-1e4ff418ae0a.png">
 <img height="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
 <img height="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
      
