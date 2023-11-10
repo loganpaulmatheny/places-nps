@@ -32,6 +32,13 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
     };
   }, [navigate]);
 
+  function handleKeyPress(event, parkId) {
+    // Check if the Enter key is pressed
+    if (event.key === "Enter") {
+      toggleVisit(parkId);
+    }
+  }
+
   const images =
     park.images?.map((image) => (
       //  Check and see if park is undefined before mapping over it and throwing an error
@@ -53,6 +60,8 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
             src={process.env.PUBLIC_URL + "/toVisit.png"}
             alt="an empty trail signpost"
             onClick={() => toggleVisit(park.id)}
+            tabIndex="0" // Make it focusable
+            onKeyDown={(event) => handleKeyPress(event, park.id)}
           />
         ) : (
           <img
@@ -60,6 +69,8 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
             src={process.env.PUBLIC_URL + "/visited.png"}
             alt="a colored trail signpost"
             onClick={() => toggleVisit(park.id)}
+            tabIndex="0" // Make it focusable
+            onKeyDown={(event) => handleKeyPress(event, park.id)}
           />
         )}
       </div>
