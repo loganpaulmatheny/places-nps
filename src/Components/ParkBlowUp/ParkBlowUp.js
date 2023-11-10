@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
   // Programatically navigate
   const navigate = useNavigate();
-  // const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   // This will force a reload of home page and then immediately route to the blowup page!
   useEffect(() => {
@@ -14,8 +14,8 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
       // Is the page being reloaded
       const isReloading = event.type === "beforeunload";
       // The beforeunload event is just before you leave a page
-      if (isReloading) {
-        // !isInitialLoad ^ removed
+      if (isReloading && !isInitialLoad) {
+        // Checks to see if it's the first time the page is loading
         console.log("redirect occured");
         // Redirect to the home page
         navigate("/");
@@ -24,7 +24,7 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
 
     window.addEventListener("beforeunload", handleBeforeUnload);
 
-    // setIsInitialLoad(false);
+    setIsInitialLoad(false);
 
     // Cleanup function, prevent a memory link
     return () => {
