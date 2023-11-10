@@ -39,7 +39,7 @@ It's time to enjoy the great outdoors! With Places (National Parks Edition) you 
 This was an individual project during Mod 3 at Turing School of Software & Design. I was given 5 days to plan, design, and build this project from scratch using the [provided comp](https://frontend.turing.edu/projects/module-3/showcase.html).
 
 ## Learning Goals:
-- Design, scope, and build a react application
+- Design, scope, and build a react application (see how I managed the project [here](https://publish.obsidian.md/loganpaulmath/1+Projects/Turing/3Mod/Showcase+Project/%F0%9F%8F%9E%EF%B8%8F+Showcase+project!))
 - Manage the project amidst other competing priorities
 - Gain competency with React fundamentals
 - Test React components & asynchronous JS E2E using Cypress
