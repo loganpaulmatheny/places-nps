@@ -13,10 +13,36 @@ describe("Testing the initial load of the page", () => {
   });
 
   it("Should display the correct things on load", () => {
-    cy.visit("http://localhost:3000").wait("@getRequest");
-    cy.get("img").should("have.attr", "src").and("include", `${"/logo.png"}`);
-    cy.get("button").should("contain", "Home");
-    cy.get("button").should("contain", "Visited");
+    cy.visit("http://localhost:3000")
+      .wait("@getRequest")
+      .get("img")
+      .should("have.attr", "src")
+      .and("include", `${"/logo.png"}`)
+      .get("button")
+      .should("contain", "Home")
+      .get("button")
+      .should("contain", "Visited")
+      .get(".card:first")
+      .get("h2")
+      .should("contain", "Acadia National Park")
+      .get(".card:first")
+      .find("div")
+      .should("have.css", "background-image")
+      .and(
+        "include",
+        `https://www.nps.gov/common/uploads/structured_data/3C7B45AE-1DD8-B71B-0B7EE131C7DFC2F5.jpg`
+      )
+      .get(".card:first")
+      .find(".arrow-icon")
+      .should("have.attr", "src")
+      .and("include", `${"/arrow.png"}`)
+      .get(".parks-container")
+      .as("parent")
+      .get("@parent")
+      .find(".card")
+      .as("child")
+      .get("@child")
+      .should("have.length", 4);
 
     // Log the intercepted request
     // cy.get("@getRequest").then((interception) => {
