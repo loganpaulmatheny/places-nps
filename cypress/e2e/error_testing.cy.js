@@ -49,10 +49,8 @@ describe("Errors", () => {
         statusCode: 200,
         fixture: "parks.json",
       }
-    )
-      .as("getParksDataSuccess")
-      .get(".back-button")
-      .click();
+    ).as("getParksDataSuccess");
+
     cy.visit("http://localhost:3000")
       .wait("@getParksDataSuccess")
       .get(".card:first")
@@ -73,6 +71,40 @@ describe("Errors", () => {
       }
     ).as("getParksData");
 
-    cy.visit("http://localhost:3000").wait("@getParksData");
+    cy.visit("http://localhost:3000")
+      .wait("@getParksData")
+      .get(".error-message")
+      .should(
+        "contain",
+        "The trail is closed for the season, check back in the warmer months!"
+      )
+      .get(".error-image")
+      .should("have.attr", "src")
+      .and("include", `${"/compass.png"}`);
+  });
+
+  it("Should be able to handle a bad route and link back to the home page", () => {
+    cy.intercept(
+      "GET",
+      `https://developer.nps.gov/api/v1/parks?limit=550&q=national%20park&api_key=${Cypress.env(
+        "REACT_APP_API_KEY"
+      )}`,
+      {
+        statusCode: 200,
+        fixture: "parks.json",
+      }
+    ).as("getRequest");
+
+    cy.visit("http://localhost:3000/testing")
+      .get("h1")
+      .should("contain", "Oops, looks like you might need to check the map")
+      .get(".error-image")
+      .should("have.attr", "src")
+      .and("include", `${"/map.png"}`)
+      .get(".back-button")
+      .click()
+      .get(".parks-container")
+      .find(".card")
+      .should("have.length", 4);
   });
 });

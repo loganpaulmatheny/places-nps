@@ -32,14 +32,6 @@ function Error({ error }) {
             src={process.env.PUBLIC_URL + "/compass.png"}
             alt=""
           />
-          <Link to="/">
-            <img
-              className="back-button"
-              src={process.env.PUBLIC_URL + "/turn-around.png"}
-              alt=""
-            />
-          </Link>
-          <p>Back to Home</p>
         </div>
       )}
     </div>

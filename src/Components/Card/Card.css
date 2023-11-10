@@ -32,3 +32,27 @@
   width: 45px;
   cursor: pointer;
 }
+
+.upper-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  justify-content: end;
+  height: 350px; 
+  width: 100%; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px
+}
+
+@media (max-width: 500px) {
+.card {
+  height: 200px; 
+  width: 100%; 
+}
+
+  .upper-card {
+  height: 100px; 
+  width: 100%; 
+  }
+}

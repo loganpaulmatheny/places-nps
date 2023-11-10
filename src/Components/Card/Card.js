@@ -10,20 +10,12 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
   return (
     <div className="card">
       <div
+        className="upper-card"
         style={{
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "center",
-          color: "white",
-          justifyContent: "end",
           backgroundImage: `url(${image_path})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center top",
-          height: "350px", // Limit the height to 150px
-          width: "100%", // Set a maximum width while maintaining aspect ratio
-          borderTopLeftRadius: "10px", // Adjust the radius value as needed
-          borderTopRightRadius: "10px", // A
         }}
       >
         <h2>{fullname}</h2>

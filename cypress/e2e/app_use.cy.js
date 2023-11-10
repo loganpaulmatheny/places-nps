@@ -140,4 +140,26 @@ describe("Testing the initial load of the page", () => {
       .should("have.attr", "src")
       .and("include", `${"/toVisit.png"}`);
   });
+
+  it("Should have proper url routing throughout the app", () => {
+    cy.visit("http://localhost:3000")
+      .wait("@getRequest")
+      .get(".nav-button")
+      .contains("Visited")
+      .click()
+      .url()
+      .should("eq", "http://localhost:3000/visit")
+      .get(".back-button")
+      .click()
+      .wait("@getRequest")
+      .get(".parks-container")
+      .get(".card:first")
+      .find(".arrow-icon")
+      .click()
+      .url()
+      .should(
+        "eq",
+        "http://localhost:3000/park/6DA17C86-088E-4B4D-B862-7C1BD5CF236B"
+      );
+  });
 });
