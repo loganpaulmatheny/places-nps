@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 
 function Card({ id, fullname, image_path, visited, toggleVisit }) {
   function handleToggle() {
-    toggleVisit(id); // Pass the ID to the toggleVisit function
+    toggleVisit(id); 
   }
 
   function handleKeyPress(event) {
-    // Check if the Enter key is pressed
+    
     if (event.key === "Enter") {
       handleToggle();
     }
@@ -33,7 +33,7 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
           className="visit-icon"
           src={process.env.PUBLIC_URL + "/toVisit.png"}
           alt="an empty trail signpost"
-          tabIndex="0" // Make it focusable
+          tabIndex="0" 
           onClick={handleToggle}
           onKeyDown={handleKeyPress}
         />
@@ -42,7 +42,7 @@ function Card({ id, fullname, image_path, visited, toggleVisit }) {
           className="visit-icon"
           src={process.env.PUBLIC_URL + "/visited.png"}
           alt="a colored trail signpost"
-          tabIndex="0" // Make it focusable
+          tabIndex="0" 
           onClick={handleToggle}
           onKeyDown={handleKeyPress}
         />

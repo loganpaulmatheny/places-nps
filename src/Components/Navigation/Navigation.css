@@ -38,15 +38,14 @@
 
 @media (max-width: 1000px) {
   .nav-bar-sticky {
-    height: 13rem; /* Increase the height for smaller screens */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    height: 13rem; 
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .nav-button {
-    /* Adjust button styles for smaller screens */
     width: 10rem;
-    margin: 10px 0; /* Adjust the margin as needed */
+    margin: 10px 0; 
   }
 
   .logo-container {
@@ -55,7 +54,6 @@
   }
 
   .logo {
-    /* Adjust logo styles for smaller screens */
     height: 75px;
     width: 75px;
   }
@@ -63,16 +61,15 @@
 
 @media (max-width: 691px) {
   .nav-bar-sticky {
-    height: 7rem; /* Increase the height for smaller screens */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    height: 7rem; 
+    flex-direction: column;
+    align-items: center; 
   }
 
   .nav-button {
-    /* Adjust button styles for smaller screens */
     width: 5rem;
     font-size: .75rem;
-    margin: 10px 0; /* Adjust the margin as needed */
+    margin: 10px 0; 
   }
 
   .logo-container {
@@ -80,7 +77,6 @@
   }
 
   .logo {
-    /* Adjust logo styles for smaller screens */
     height: 30px;
     width: 30px;
   }

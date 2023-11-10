@@ -47,16 +47,6 @@ describe("Testing the initial load of the page", () => {
       .as("child")
       .get("@child")
       .should("have.length", 4);
-
-    // Log the intercepted request
-    // cy.get("@getRequest").then((interception) => {
-    //   console.log("Intercepted Request:", interception);
-    // });
-
-    // Log the content of the fixture
-    // cy.fixture("parks.json").then((fixtureContent) => {
-    //   console.log("Fixture Content:", fixtureContent);
-    // });
   });
   it("Should be able to navigate to different areas of the app as well as use the arrows", () => {
     cy.visit("http://localhost:3000")
