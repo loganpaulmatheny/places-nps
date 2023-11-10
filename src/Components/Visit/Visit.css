@@ -3,7 +3,6 @@
   height: 95vh;
   display: flex;
   justify-content: center;
-  /* background-image: url("https://images.unsplash.com/photo-1579106131295-dfab63d39847?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
   background-image: url("https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   display: flex;
   flex-direction: row;
@@ -14,7 +13,6 @@
 
 .visit-container {
   padding: 20px;
-  /* background-image: url("../../../public/hiking.png"); */
   display: flex;
   flex-direction: column;
   align-items: center;

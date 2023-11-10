@@ -1,16 +1,13 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import { cleanParksData } from "../../apiCalls";
+import { getParks } from "../../apiCalls";
 import Navigation from "../Navigation/Navigation";
 import Home from "../Home/Home";
 import ParkInfo from "../Park_Info/ParkInfo";
 import Visit from "../Visit/Visit";
 import Error from "../Error/Error";
-import { useEffect, useState } from "react";
-// import mockData from "../../Mock_Data/MockData";
-import { cleanParksData } from "../../apiCalls";
-import { getParks } from "../../apiCalls";
-import { NavLink } from "react-router-dom";
 function App() {
   const [parks, setParks] = useState([]);
   const [error, setError] = useState("");
