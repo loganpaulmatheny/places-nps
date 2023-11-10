@@ -34,7 +34,7 @@
   flex-direction: column;
   text-align: center;
   color: white;
-  justify-content: end;
+  justify-content: flex-end;
   height: 350px; 
   width: 100%; 
   border-top-left-radius: 10px;
