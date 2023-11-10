@@ -3,12 +3,12 @@
 <div align="center">
   
 ##### Built With: 
-<img width="1468" alt="Screenshot 2023-11-10 at 4 27 47 PM" src="https://user-images.githubusercontent.com/46095125/282182646-49c5d8d3-3b83-4341-a66f-1e4ff418ae0a.png">
-<img height="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
-<img height="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+<img height="100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
      
 ##### Testing Technologies:
-<img height="60px" src="https://avatars.githubusercontent.com/u/8908513?s=200&v=4"/>
+<img height="100px" src="https://avatars.githubusercontent.com/u/8908513?s=200&v=4"/>
 
 ### [View Deployed App](https://places-nps.vercel.app/)
 
@@ -21,41 +21,38 @@
 It's time to enjoy the great outdoors! With Places (National Parks Edition) you can start to track which of the 63 National Parks you've had a chance to visit, and plan for which one's you'll visit soon. With this app you can track the parks you've visited, look at which ones you might like to, and get helpful information about them like directions. We hope to see you on the trail soon!
 
 ## Preview:
-**Start Page**
-<img width="1439" alt="Screenshot 2023-11-07 at 11 59 09 AM" src="https://github.com/Jnguyen615/Stretch-tech/assets/130857864/8843c8b0-e74e-4a86-96dd-fed0aeb7aa43">
+**Home Page**
+<img width="1468" alt="Screenshot 2023-11-10 at 4 27 47 PM" src="https://user-images.githubusercontent.com/46095125/282182646-49c5d8d3-3b83-4341-a66f-1e4ff418ae0a.png">
 
-**Game Play**
-<img width="1592" alt="Screenshot 2023-11-03 at 1 26 39 PM" src="https://user-images.githubusercontent.com/46095125/280372211-a7e9f45c-f42c-45bd-9438-330a770f9d4b.png">
+**Parks Visited**
+<img width="1470" alt="Screenshot 2023-11-10 at 4 29 30 PM" src="https://user-images.githubusercontent.com/46095125/282182925-7771b1a3-2f9e-4e99-8cc6-1781a111baff.png">
 
-**End Screen**
-<img width="1438" alt="Screenshot 2023-11-07 at 11 59 29 AM" src="https://github.com/Jnguyen615/Stretch-tech/assets/130857864/a870df25-e3c9-49bc-bdb7-16a49dd4f7d6">
+**Park Info**
+<img width="548" alt="Screenshot 2023-11-10 at 4 30 56 PM" src="https://user-images.githubusercontent.com/46095125/282183117-d1043e05-caa2-4885-ada8-3c5a14f326a9.png">
 
 
 ## Contributors:
-
-- [Jen Nguyen](https://github.com/Jnguyen615)
-- [Jen Ziel](https://github.com/jenziel)
 - [Logan Matheny](https://github.com/loganpaulmatheny)
-- [Nicole Rue](https://github.com/nicolerue)
 
 ## Context:
 
-This is a group project during Mod 3 at Turing School of Software & Design. We were given approximately 1 week to create this project from scratch using the [provided comp](https://frontend.turing.edu/projects/module-3/stretch.html).
+This was an individual project during Mod 3 at Turing School of Software & Design. I was given 5 days to plan, design, and build this project from scratch using the [provided comp](https://frontend.turing.edu/projects/module-3/showcase.html).
 
 ## Learning Goals:
-- Learn and implement a completely new technology - Redux
+- Design, scope, and build a react application
+- Manage the project amidst other competing priorities
 - Gain competency with React fundamentals
-- Test React components & asynchronous JS
-- Practice refactoring
+- Test React components & asynchronous JS E2E using Cypress
 - Create a multi-page UX using Router
-- Learn to deploy an application
+- Learn to deploy an application (with environmental variables)
 
 ## Challenges:
-- Redux: This was our first time learning about as well as implementing Redux. While our application was relatively small it gave us a good opportunity to experiment and learn about the power that Redux offers to manage global state.
-- React: This was our collective second React Application. We enjoyed continuing to learn about the features, functionality, and requirements for implementation within this library/framework.
+- Environmental variables: This was my first time working with environmental variables and it was challenging to protect, test, and deploy the application with them.
+- Data Persistence: This application utilizes the 
 
 
 ## Installation Instructions:
+**Note:** For those less techy savvy folks, you can simply click the deployed link at the top 🥳
 
 1. Fork this repository.
 2. Clone it to your local machine using the green `<> CODE` button and paste that into your terminal with the command: `git clone <paste here>`
@@ -65,8 +62,9 @@ This is a group project during Mod 3 at Turing School of Software & Design. We w
 6. The application will open in your browser
 
 ## Ideas for future iterations 
-- Add grade-level options for words 
-- Add a page where misspelled words go or some sort of word bank for later practice
-- Login for teachers and giving them the ability to create their own list of words 
-- Functionality for autofocus on the submit button after all letters are entered and using backspace to go back a letter box
+- Be able to differentiate between places a user would like to go vs. have already visited
+- Take notes on your favorite parks
+
+### Long Term
+- Use this app as a starting spot for an application leveraging a maps API to save collections of locations that you've visited/ 
 
