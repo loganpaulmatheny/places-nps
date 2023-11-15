@@ -12,7 +12,7 @@ describe("Testing the initial load of the page", () => {
     ).as("getRequest");
   });
 
-  it.skip("Should display the correct things on load", () => {
+  it("Should display the correct things on load", () => {
     cy.visit("http://localhost:3000")
       .wait("@getRequest")
       .get("img")
@@ -70,7 +70,7 @@ describe("Testing the initial load of the page", () => {
       .should("have.attr", "src")
       .and("include", `${"/toVisit.png"}`);
   });
-  it.skip("Should be able to navigate to different areas of the app as well as use the arrows", () => {
+  it("Should be able to navigate to different areas of the app as well as use the arrows", () => {
     cy.visit("http://localhost:3000")
       .wait("@getRequest")
       .get("button")
@@ -362,7 +362,7 @@ describe("Testing the initial load of the page", () => {
       .and("include", `${"/toVisit.png"}`);
   });
 
-  it.skip("Should have proper url routing throughout the app", () => {
+  it("Should have proper url routing throughout the app", () => {
     cy.visit("http://localhost:3000")
       .wait("@getRequest")
       .get(".nav-button")
