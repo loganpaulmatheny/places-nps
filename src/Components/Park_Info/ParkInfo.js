@@ -6,11 +6,7 @@ import PropTypes from "prop-types";
 
 function ParkInfo({ parks, toggleVisit }) {
   const id = useParams().id;
-  const parkToView = parks.filter((parkData) => {
-    if (parkData.id === id) {
-      return parkData;
-    }
-  });
+  const parkToView = parks.filter((parkData) => parkData.id === id);
 
   return <ParkBlowUp park={parkToView[0]} toggleVisit={toggleVisit} />;
 }
