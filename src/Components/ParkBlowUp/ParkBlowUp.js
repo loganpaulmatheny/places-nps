@@ -28,7 +28,7 @@ function ParkBlowUp({ park = {}, toggleVisit = () => {} }) {
     return () => {
       window.removeEventListener("beforeunload", handleBeforeUnload);
     };
-  }, [navigate]);
+  }, [navigate, isInitialLoad]);
 
   function handleKeyPress(event, parkId) {
     if (event.key === "Enter") {
