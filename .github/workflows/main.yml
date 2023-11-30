@@ -27,8 +27,12 @@ jobs:
       # - name: Run ESLint
       #   run: npm run lint
 
-      - name: Run Cypress Tests
-        run: npm run cypress
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
+          browser: chrome
 
       - name: Build
         run: npm run build
