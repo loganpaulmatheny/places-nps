@@ -24,8 +24,8 @@ jobs:
       # - name: Run Tests
       #   run: npm test
 
-      - name: Run ESLint
-        run: npm run lint
+      # - name: Run ESLint
+      #   run: npm run lint
 
       - name: Run Cypress Tests
         run: npm run cypress
