@@ -1,0 +1,45 @@
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Cypress Tests
+        run: npm run cypress
+
+      - name: Build
+        run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v21
+        with:
+          vercelToken: ${{ secrets.NWL7m82iZEle94HNd9XJaiuE }}
+          vercelProjectId: ${{ secrets.prj_mtuf7tNbU6ENQXmAint5nBUL9l45 }}
+          vercelOrgId: ${{ secrets.NWL7m82iZEle94HNd9XJaiuE }}
